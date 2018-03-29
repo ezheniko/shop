@@ -1,0 +1,227 @@
+$promo-width: 100%;
+$promo-height: 230px;
+$promo-border: 7px;
+
+.Promo-Wrap {
+  display: flex;
+  margin-bottom: 27px;
+
+  @include laptop {
+    flex-direction: column;
+    margin-bottom: 37px;
+  }
+}
+.Promo {
+  display: flex;
+  position: relative;
+  width: 100%;
+  
+  @include laptop {margin-bottom: 45px;}
+}
+
+.Promo-List {
+  position: relative;
+  display: flex;
+  width: $promo-width;
+  height: $promo-height;
+  border: $promo-border solid #679bbd;
+  border-radius: 5px;
+}
+
+.Promo-Item {
+  position: absolute;
+  width: $promo-width;
+  height: 100%;
+  flex-shrink: 0;
+  opacity: 0;
+  box-sizing: border-box;
+  padding-left: 35px;
+  background-image: url("../img/promobg.jpg");
+  background-size: cover;
+
+  @include bpsmall {
+    background-size: 100% 44%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+  }
+}
+
+.Promo-Item_Current {
+  opacity: 1;
+  z-index: 1;
+}
+
+.Promo-Title {
+  margin: 0;
+  margin-top: 12px;
+  font-family: century_gothicregular, sans-serif;
+  font-size: 31px;
+  line-height: 35px;
+  letter-spacing: -1px;
+  font-weight: 100;
+  color: rgb(102,64,199);
+
+  @include phone {
+    font-size: 26px;
+    line-height: 30px;
+  }
+}
+
+.Promo-Text {
+  margin: 0;
+  margin-top: 12px;
+  font-family: century_gothicregular, sans-serif;
+  font-size: 17px;
+  line-height: 22px;
+  color: $black;
+
+  @include phone {font-size: 16px;}
+}
+
+.Promo-Link {
+  display: block;
+  margin-top: 12px;
+  width: 275px;
+  height: 45px;
+  font-size: 18px;
+  line-height: 45px;
+  color: #fff;
+  font-family: "Century Gothic-bold", sans-serif;
+  text-align: center;
+  border: 1px solid #686868;
+  border-radius: 5px;
+  background-image: url("../img/btnbg.png");
+  cursor: pointer;
+
+  &:hover, &:focus {
+    box-shadow: 0px 0px 8px 2px rgba(100, 16, 202, 0.6);
+    outline: none;
+  }
+}
+
+.Promo-Controls {
+  position: absolute;
+  display: flex;
+  top: $promo-height + $promo-border;
+  left: $promo-border;
+}
+
+.Promo-Button {
+  padding: 0;
+  width: 20px;
+  height: 25px;
+  border-radius: 4px;
+  border: 2px solid $light-blue;
+  background-color: $light-blue;
+  margin-right: 2px;
+
+  color: #fff;
+  line-height: 18px;
+  text-align: center;
+
+  &:hover, &:focus {
+    background: #fff;
+    color: $red;
+    border-top-color: #fff;
+    cursor: pointer;
+    outline: none;
+  }
+}
+
+.Promo-Button_Current {
+  background: #fff;
+  color: $red;
+  border-top-color: #fff;
+}
+
+.Promotions {
+  width: 350px;
+  flex-shrink: 0;
+  margin-left: 30px;
+
+  @include laptop {
+    margin-left: 0;
+    width: auto;
+  }
+}
+
+.Promotions h2 {
+  margin: 0;
+  font-size: 25px;
+  line-height: 18px;
+  font-family: Arial-Black, Arial, sans-serif;
+  font-style: italic;
+  color: $red;
+}
+
+.Promotions-List {margin-left: 10px;}
+
+.Promotions-List li {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+
+  @include laptop {
+    justify-content: flex-start;
+  }
+}
+
+.Promotions-ImageWrap {
+  width: 50px;
+  flex-shrink: 0;
+}
+
+.Promotions-List img {width: auto;}
+
+.Promotions-List p {
+  width: 270px;
+  margin: 0;
+
+  @include laptop {
+    width: auto;
+    margin-left: 23px;
+  }
+}
+
+.Promotions-List p a {
+  border-bottom: 1px solid $blue;
+
+  &:hover, &:focus {color: $black; border-bottom-color: $red; outline: none;}
+
+  &:visited {
+    color: $violet;
+    border-bottom-color: $violet;
+    &:hover, &:focus {color: $black; border-bottom-color: $red; outline: none;}
+  }
+}
+
+.Promotions-Link {
+  display: inline-block;
+  margin-top: 5px;
+  @include skew-shape;
+  background: linear-gradient(0deg, #ffffff 0%, #ecedec 37%, #feffff 100%);
+  border: 1px solid $light-grey;
+  padding-left: 8px;
+  padding-right: 8px;
+
+  span {
+    font-size: 15px;
+    color: $blue;
+    font-weight: bold;
+    border-bottom: 2px solid $blue;
+  }
+
+  &:hover, &:focus {
+    box-shadow: 0px 0px 8px 2px rgba(105, 156, 190, 0.6);
+    outline: none;
+  }
+}
+
+.Equaliser {
+  transform: skewX(25deg);
+  height: 25px;
+  line-height: 25px;
+  padding-right: 23px;
+  background: url(../img/arrow.svg) no-repeat right center;
+}

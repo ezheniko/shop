@@ -1,0 +1,367 @@
+.MainHeader {
+  position: relative;
+  width: 100%;
+}
+.MainHeader::before {
+  content: "";
+  position: absolute;
+  top: 60px;
+  height: 115px;
+  width: 100%;
+  background-image: linear-gradient(0deg, #fff 0%, rgb(230, 230, 230) 50%, rgb(255, 255, 255) 100%);
+  z-index: -1;
+
+  @include bpbig {
+    display: none;
+  }
+}
+
+.HeaderTop {
+  display: flex;
+  margin: 10px 0;
+
+  @include bpbig {
+    justify-content: space-between;
+  }
+}
+
+.MainLogo {
+  flex-shrink: 0;
+
+  @include tablet {width: 124px;}
+}
+
+.Help-Navigation {
+  display: flex;
+  max-width: 546px;
+  flex-grow: 1;
+  margin-left: 50px;
+  margin-right: 10px;
+
+  @include bpbig {
+    flex-grow: 0;
+    margin-left: unset;
+    margin-right: unset;
+  }
+}
+
+.Help-Online {
+  position: relative;
+  box-sizing: border-box;
+  margin-left: auto;
+  width: 87px;
+  height: 88px;
+  border-radius: 5px;
+  background-image: linear-gradient(0deg, #dfdfdf 0%, #ffffff 42%);
+  border: 1px solid rgb(108, 189, 104);
+  color: $black;
+  text-align: center;
+  line-height: 14px;
+  font-weight: bold;
+
+  @media screen and (max-width: 935px) {
+    display: none;
+  }
+
+  &:hover, &:focus {
+    box-shadow: 0px 0px 8px 2px rgba(108, 189, 104, 0.6);
+    outline: none;
+  }
+}
+
+.Help-Online img {
+  margin-top: -5px;
+}
+
+.Help-Online::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 9px;
+  height: 9px;
+  background-image: url("../img/indicator.png");
+}
+
+.UserNavigation-Menu {
+  margin-bottom: 14px;
+  @include bpbig {
+    margin-bottom: 8px;
+    margin-left: 23px;
+  }
+}
+
+.UserNavigation {
+  margin-left: auto;
+
+  @include bpbig {
+    margin-left: unset;
+  }
+}
+
+.UserNavigation-Item {
+  padding-left: 23px;
+  background: url("../img/usericon.png") no-repeat 0 0;
+}
+
+.UserNavigation-Cart {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 209px;
+  height: 56px;
+  border-radius: 5px;
+  border: 1px solid #cecdcd;
+  padding: 15px;
+  padding-left: 60px;
+  font-size: 23px;
+  letter-spacing: -1px;
+  line-height: 18px;
+  font-family: Arial-Black, Arial Bold, sans-serif;
+  box-shadow: 0px 1px 0px rgba(255,255,255,0.77);
+  color: $blue;
+  text-decoration: underline;
+  font-style: italic;
+  background: url("../img/cart.svg") no-repeat 15px 5px;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    margin-top: -6px;
+    right: 12px;
+    content: "";
+    display: block;
+    border: 6px solid transparent;
+    border-top: 12px solid $blue;
+  }
+
+  @include bpbig {
+    width: 115px;
+    height: 31px;
+    line-height: 31px;
+    font-size: 13px;
+    padding: 0 35px;
+    background-position: 9px 5px;
+    background-size: 17%;
+
+    &::after {
+      border-width: 3px;
+      border-top-width: 6px;
+      right: 9px;
+      margin-top: -3px;
+    }
+  }
+
+  &:hover, &:focus {
+    box-shadow: 0px 0px 8px 2px rgba(105, 156, 190, 0.6);
+    border-color: $light-blue;
+  }
+}
+
+.AdaptiveHidden {
+  @include bpbig {
+    display: none;
+  }
+}
+
+.Cart-Amount {
+  box-sizing: border-box;
+  position: absolute;
+  top: 5px;
+  left: 28px;
+  color: $red;
+  font-size: 18px;
+  line-height: 18px;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background-image: linear-gradient(0deg, #f6f6f6 0%, #d7d6d6 11%, #dbdbdb 26%, #ffffff 100%);
+  border: 1px solid #cecdcd;
+
+  @include bpbig {
+    font-size: 10px;
+    line-height: 10px;
+    width: 10px;
+    height: 10px;
+    left: 16px;
+  }
+}
+
+.Phone {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 34px;
+  letter-spacing: -1px;
+  line-height: 21px;
+  color: $black;
+  font-style: oblique;
+  font-weight: bold;
+
+  @include tablet {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: normal;
+    margin-right: 15px;
+    margin-bottom: 10px;
+  }
+
+  @include phone {font-size: 13px;}
+}
+
+.Phone-Code {
+  font-size: 23px;
+  font-weight: normal;
+  margin-left: 15px;
+
+  @include tablet {
+    font-size: inherit;
+    line-height: inherit;
+  }
+}
+
+.MainHeader .Callback {
+  @include bpsmall {
+    width: 18px;
+    height: 18px;
+    img {display: block;}
+    span {display: none;}
+    border-bottom: none;
+    margin-left: 10px;
+  }
+
+  @include phone {
+    position: absolute;
+    top: 24px;
+  }
+}
+
+.Search {
+  position: relative;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transform: skewX(-25deg);
+
+  @include bpsmall {
+    width: 18px;
+    height: 18px;
+    transform: none;
+  }
+
+  @include phone {
+    position: absolute;
+    top: 24px;
+  }
+}
+
+.Search button {
+  display: none;
+  position: absolute;
+  left: 70px;
+  width: 18px;
+  height: 18px;
+  border: 3px solid $black;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover, &:focus {
+    border-color: $blue;
+
+    &::after {background-color: $blue;}
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -3px;
+    bottom: -4px;
+    display: block;
+    width: 3px;
+    height: 7px;
+    background-color: #333333;
+    transform: rotate(-45deg);
+  }
+
+  @include bpsmall {
+    display: block;
+  }
+}
+
+.Search input[type="search"] {
+  width: 100%;
+  height: 23px;
+
+  border: 1px solid #c4c4c4;
+  border-radius: inherit;
+
+  font-size: 15px;
+  line-height: 81px;
+  color: $grey;
+
+  padding-left: 10px;
+  padding-right: 55px;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.08) inset;
+
+  &:hover, &:focus {
+    box-shadow: 0px 0px 8px 2px rgba(105, 156, 190, 0.6);
+    border-color: $light-blue;
+    outline: none;
+  }
+
+  @include tablet {
+    height: 23px;
+  }
+
+  @include bpsmall {
+    display: none;
+  }
+}
+
+.Search input[type="submit"] {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  width: 52px;
+  height: 19px;
+  background-image: url("../img/enter.png"), linear-gradient(0deg, #fff 0%, #ecedec 37%, #feffff 100%);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid $light-grey;
+  border-radius: inherit;
+
+  &:hover, &:focus {
+    box-shadow: inset 0px 0px 8px 2px rgba(105, 156, 190, 0.6);
+    border-color: $light-blue;
+    outline: none;
+  }
+
+  @include bpsmall {
+    display: none;
+  }
+}
+
+.SiteMenu {
+  display: flex;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.MainHeader .SiteMenu {
+  @include bpbig {
+    display: none;
+  }
+}
+
+.SiteMenu li {flex-shrink: 0;}
+
+.SiteMenu .ButtonLink {
+  border-bottom-style: solid;
+  margin-right: 15px;
+  box-shadow: 0px 1px 0px #ffffff;
+}
+
+.SiteMenu-Help {
+  padding-left: 15px;
+  background: url("../img/question.png") no-repeat;
+  background-position-y: 1px;
+}

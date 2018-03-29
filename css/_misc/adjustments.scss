@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "ArialMT", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  color: $black;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.VisuallyHidden:not(:focus):not(:active),
+input[type="checkbox"].VisuallyHidden,
+input[type="radio"].VisuallyHidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.Container {
+  box-sizing: border-box;
+  width: $container-width;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @include pc {width: 100%;}
+
+  @include laptop {padding: 0 10px;}
+
+  @include phone {padding: 0 5px;}
+
+  min-width: 390px;
+}

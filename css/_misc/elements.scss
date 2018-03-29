@@ -1,0 +1,33 @@
+.ButtonLink {
+  margin: 0;
+  padding: 0;
+  line-height: 17px;
+  color: $blue;
+  border: none;
+  border-bottom: 1px dashed $blue;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover, &:focus {color: $black; border-bottom-color: $red; outline: none;}
+}
+
+.MenuBtn {
+  width: 28px;
+  height: 23px;
+  border-radius: 3px;
+  background-color: #fff;
+  border: 1px solid #0b4871;
+  background-image: linear-gradient(transparent 0, transparent 17%, #a9a9a9 17%, #a9a9a9 29%, transparent 29%, transparent 45%, #a9a9a9 45%, #a9a9a9 55%, transparent 55%, transparent 71%, #a9a9a9 71%, #a9a9a9 82%, transparent 82%, transparent 100%);
+  background-size: 60% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.Callback {
+  vertical-align: text-top;
+  font-style: italic;
+  font-size: 13px;
+
+  img {display: none;}
+}

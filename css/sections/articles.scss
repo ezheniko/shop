@@ -1,0 +1,91 @@
+.Reviews {
+  position: relative;
+  margin-bottom: 68px;
+}
+
+.Reviews h2 {
+  font-family: Arial-Black, Arial, sans-serif;
+  font-size: 20px;
+  line-height: 18px;
+  font-style: italic;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.Reviews-AllLink {
+  position: absolute;
+  top: -10px;
+  right: 58px;
+
+  @media screen and (max-width: 1000px) {right: 12px;}
+
+  @include phone {
+    top: unset;
+    bottom: -13px;
+  }
+}
+
+.Reviews-List {
+  display: flex;
+
+  @include bpbig {flex-direction: column;}
+}
+
+.Reviews-Item {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  margin-right: 20px;
+
+  @include bpbig {
+    width: auto;
+    flex-direction: row;
+    margin-right: 0;
+  }
+
+  @include phone {flex-direction: column;}
+}
+
+.Reviews-ImgWrap {
+  display: flex;
+  align-items: center;
+  order: -1;
+  height: 130px;
+
+  img {width: auto;}
+
+  @include bpbig {
+    width: 30%;
+    flex-shrink: 0;
+
+    img {max-width: 85%;}
+  }
+
+  @include phone {
+    align-self: center;
+    width: auto;
+
+    img {max-width: unset;}
+  }
+}
+
+.Reviews-Title {
+  margin-top: 12px;
+  margin-bottom: -5px;
+
+  a {
+    font-size: 15px;
+    color: $blue;
+    text-decoration: underline;
+    outline: none;
+
+    &:hover, &:focus {color: $red;}
+
+    &:visited {
+      color: $violet;
+
+      &:hover, &:focus {color: $red;}
+    }
+  }
+  
+}

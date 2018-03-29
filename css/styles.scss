@@ -1,0 +1,24 @@
+//fonts
+@import "./_misc/fonts";
+
+//global variables
+$container-width: 1200px;
+
+//colors
+$blue: rgb(16, 90, 143);
+$light-blue: rgb(105, 156, 190);
+$grey: rgb(153,153,153);
+$light-grey: rgb(228,228,228);
+$black: rgb(51, 51, 51);
+$red: rgb(209, 0, 0);
+$violet: rgb(100, 16, 202);
+
+//layout
+@import "./_misc/mixins";
+@import "./_misc/adjustments";
+@import "./_misc/elements";
+
+//sections
+@import "./sections/header";
+@import "./sections/main";
+@import "./sections/footer";

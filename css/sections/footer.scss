@@ -1,0 +1,191 @@
+.Footer-Container {
+  border-top: 4px solid $blue;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  box-shadow: 0px -49px 84px -44px rgba(51, 51, 51, 0.2);
+}
+
+.Copyright {
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.MainFooter .SiteMenu {
+  margin-top: 3px;
+  margin-bottom: 28px;
+}
+
+.FooterColumns {
+  display: flex;
+
+  @include bpbig {flex-direction: column;}
+}
+
+.FooterColumns>li {
+  width: 25%;
+
+  @include bpbig {
+    display: flex;
+    width: auto;
+  }
+  @include phone {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.Footer-SmallCol {
+  @include bpbig {width: 50%;}
+  @include phone {width: auto;}
+}
+
+.Contacts {
+  line-height: 22px;
+
+  @include bpbig {margin-bottom: 18px;}
+}
+
+.Contacts-Phone {
+  font-size: 24px;
+  letter-spacing: -1px;
+  line-height: 21px;
+
+  span {
+    font-weight: bold;
+  }
+}
+
+footer .Callback {
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: -10px;
+  margin-bottom: 35px;
+  @include skew-shape;
+  background: linear-gradient(0deg, #ffffff 0%, #ecedec 37%, #feffff 100%);
+  border: 1px solid $light-grey;
+  padding-left: 8px;
+  padding-right: 8px;
+
+  .Equaliser {
+    padding: 0;
+    background: none;
+
+    span {
+      line-height: 17px;
+      color: $blue;
+      border-bottom: 1px dashed $blue;
+      font-style: normal;
+    }
+  }
+
+  @include bpbig {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+
+  &:hover, &:focus {
+    box-shadow: 0px 0px 8px 2px rgba(105, 156, 190, 0.6);
+    border-color: $light-blue;
+    outline: none;
+  }
+}
+
+.Work {
+  b {
+    line-height: 22px;
+    font-weight: bold;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  @include bpbig {margin-bottom: 40px;}
+}
+
+.Pay {
+  margin-top: 15px;
+
+  @include bpbig {margin-top: 0;}
+}
+
+.PayCards {
+  display: flex;
+
+  li {
+    height: 25px;
+    margin-right: 10px;
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+}
+
+.Socials {
+  @include bpbig {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  @include phone {
+    flex-direction: column;
+    width: auto;
+  }
+}
+
+.Socials-Link {
+  display: block;
+  height: 28px;
+  line-height: 28px;
+  margin-bottom: 2px;
+  padding-left: 35px;
+  color: $blue;
+  text-decoration: underline;
+  
+  &:hover, &:focus {color: $red; outline: none;}
+}
+
+.fb {background: url("../img/logos/fb.png") no-repeat;}
+.vk {background: url("../img/logos/vk.png") no-repeat;}
+.tw {background: url("../img/logos/tw.png") no-repeat;}
+
+.Developer {
+  font-size: 11px;
+  line-height: 15px;
+
+  .Year {color: $grey;}
+  a {color: $blue; text-decoration: underline;}
+
+  @include bpbig {
+    border-top: 1px solid #e6e6e6;
+    padding-top: 30px;
+    justify-content: center;
+  }
+}
+
+.Developer-Wrap {
+  @include bpbig{
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+.Developer-TextWrap {
+  @include bpbig{
+    width: 200px;
+    margin-left: 10px;
+  }
+
+  a:hover, a:focus {color: $red;outline: none;}
+}
+
+.License {
+  color: inherit;
+  text-decoration: underline;
+
+  &:hover, &:focus {color: $red;}
+}

@@ -1,0 +1,42 @@
+//adaptive breakpoints
+@mixin pc {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin bpbig {
+  @media screen and (max-width: 845px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin bpsmall {
+  @media screen and (max-width: 595px) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin skew-shape {
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transform: skewX(-25deg);
+}
