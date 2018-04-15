@@ -826,6 +826,7 @@ input[type="radio"].VisuallyHidden {
   padding-left: 35px;
   background-image: url("../img/promobg.jpg");
   background-size: cover;
+  transition: 0.4s;
 }
 @media screen and (max-width: 595px) {
   .Promo-Item {
@@ -909,6 +910,7 @@ input[type="radio"].VisuallyHidden {
   color: #fff;
   line-height: 18px;
   text-align: center;
+  transition: 0.4s;
 }
 .Promo-Button:hover, .Promo-Button:focus {
   background: #fff;

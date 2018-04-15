@@ -39,6 +39,8 @@ $promo-border: 7px;
   background-image: url("../img/promobg.jpg");
   background-size: cover;
 
+  transition: 0.4s;
+
   @include bpsmall {
     background-size: 100% 44%;
     background-position: bottom;
@@ -118,6 +120,8 @@ $promo-border: 7px;
   color: #fff;
   line-height: 18px;
   text-align: center;
+
+  transition: 0.4s;
 
   &:hover, &:focus {
     background: #fff;
